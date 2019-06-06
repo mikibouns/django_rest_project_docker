@@ -1,0 +1,49 @@
+version: '3.1'
+
+volumes:
+    pgdata:
+        driver: local
+services:
+    postgres:
+        image: postgres:10.8
+        ports:
+            - 5432:5432
+        environment:
+            POSTGRES_USER: administ
+            POSTGRES_PASSWORD: Testtest123
+            POSTGRES_DB: proj_db
+            PGDATA: /var/lib/postgresql/data
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
+    python:
+        restart: always
+        build:
+            context: .
+            dockerfile: docker/python/Dockerfile
+        volumes:
+            - ./rest_project:/srv/www/rest_project
+        expose:
+            - 8000
+        ports:
+            - 8000:8000
+        command: "gunicorn -c gunicorn.py rest_project.wsgi"
+    nginx:
+        restart: always
+        image: nginx:latest
+        expose:
+            - 8080
+        ports:
+            - 80:8080
+        volumes:
+            - ./rest_project/static:/srv/www/rest_project/static
+            - ./rest_project/media:/srv/www/rest_project/media
+            - ./rest_project/logs:/srv/www/rest_project/logs
+            - ./docker/nginx:/etc/nginx/conf.d
+        depends_on:
+            - python
