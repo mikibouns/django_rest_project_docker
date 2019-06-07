@@ -1,19 +1,19 @@
 # django_rest_project_docker
 
-##Установка и настройка
+## Установка и настройка
 
-####Требования
+#### Требования
 + OC Ubuntu 18.04
 + Docker-ce 18.09.6
 + Docker-compose 1.25.0-rc1
 
-####Подготовка
+#### Подготовка
 *C помощью файла* [docker_install_ubuntu1804.sh](https://github.com/mikibouns/django_rest_project_docker/blob/master/docker_install_ubuntu1804.sh) *происходит установка и настройка docker-ce и docker-compose*
 ```buildoutcfg
 sudo chmod +x docker_install_ubuntu1804.sh
 sudo ./docker_install_ubuntu1804.sh
 ```
-####Установка и настройка проекта
+#### Установка и настройка проекта
 *Выполняем следующие команды находясь в корне проекта (django_rest_project_docker)*
 ```buildoutcfg
 sudo chmod +x install.sh
