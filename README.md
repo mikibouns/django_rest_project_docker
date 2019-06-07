@@ -8,7 +8,7 @@
 + Docker-compose 1.25.0-rc1
 
 #### Подготовка
-*C помощью файла* [docker_install_ubuntu1804.sh](https://github.com/mikibouns/django_rest_project_docker/blob/master/docker_install_ubuntu1804.sh) *происходит установка и настройка docker-ce и docker-compose*
+*C помощью файла* [docker_install_ubuntu1804.sh](https://github.com/mikibouns/django_rest_project_docker/blob/master/docker_install_ubuntu1804.sh) *происходит установка и настройка* **docker-ce** *и* **docker-compose**
 ```buildoutcfg
 sudo chmod +x docker_install_ubuntu1804.sh
 sudo ./docker_install_ubuntu1804.sh
