@@ -38,8 +38,8 @@ password: Testtest123
 
 Регистрация нового пользователя:
 
-+ URL: http://your_hostname/api/v1/users/
-+ method: POST
++ URL: **http://your_hostname/api/v1/users/**
++ method: **POST**
 >Request
 ```buildoutcfg
 {
@@ -58,8 +58,8 @@ password: Testtest123
 ```
 
 Как получить токен зарегестрированному пользователю:
-+ URL: http://your_hostname/api/v1/get_token/
-+ method: POST
++ URL: **http://your_hostname/api/v1/get_token/**
++ method: **POST**
 >Request
 ```buildoutcfg
 {
