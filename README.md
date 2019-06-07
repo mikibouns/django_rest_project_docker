@@ -26,7 +26,7 @@ sudo ./install.sh
 + [nginx](https://hub.docker.com/_/nginx/)
 
 
-После [установки и настройки](#Установка-и-настройка) проекта вам будет доступна панель администрирования http://your_hostname/admin/ и RootAPI http://your_hostname/api/v1/.
+После [установки и настройки](#Установка-и-настройка) проекта вам будет доступна панель администрирования **http://your_hostname/admin/** и RootAPI **http://your_hostname/api/v1/**.
 
 Учетные данные суперпользователя: 
 ```
