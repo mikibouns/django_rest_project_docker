@@ -11,7 +11,7 @@ sudo apt-key add gpg
 echo "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee -a /etc/apt/sources.list.d/docker.list
 
 # Обновляем базу данных и установите Docker
-apt-get install docker-ce
+apt-get install docker-ce -y
 
 # запускаем Docker
 systemctl start docker
