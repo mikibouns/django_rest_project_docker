@@ -4,7 +4,9 @@
 echo "Сейчас будут созданны ssl сертификаты для NGINX, пожалуйста следуйте инструкции на экране."
 openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout ./docker/nginx/nginx.key -out ./docker/nginx/nginx.crt
 
-if [ `ls ./docker/nginx/ | grep nginx.*` ]
+crt=`ls ./docker/nginx/ | grep nginx.*`
+
+if [ "$crt" ]
 then
     echo "Creating certificates is done."
 else
