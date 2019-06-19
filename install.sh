@@ -14,4 +14,4 @@ else
     exit 0
 fi
 
-docker-compose build && docker-compose up -d && docker exec -it python_project python manage.py fill_dbn_
+docker-compose build && docker-compose up -d && docker exec -it python_project python manage.py fill_db
